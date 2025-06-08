@@ -8,11 +8,7 @@ export default function UserCard({
   onClick: () => void;
 }) {
   return (
-    <tr
-      onClick={onClick}
-      style={{ cursor: "pointer" }}
-      title="Click for details"
-    >
+    <tr onClick={onClick} title="Click for details">
       <td>{user.name}</td>
       <td>{user.email}</td>
       <td>{user.phone}</td>

@@ -42,6 +42,9 @@ td {
   font-size: 14px;
   color: #333;
 }
+tr {
+  cursor: pointer;
+}
 
 tbody tr:hover {
   background-color: #e6f0fa;
