@@ -2,6 +2,10 @@
 
 This is a React TypeScript project that fetches a list of users and displays them in a table. Clicking on a user row opens a modal with detailed information about the user, including connection info, address, and company details.
 
+## 🚀 Demo
+
+👉 [Live Demo](https://data-fetching-3131.web.app/)
+
 ## Features
 
 - Fetches user data from [JSONPlaceholder](https://jsonplaceholder.typicode.com/users)
@@ -49,4 +53,3 @@ This is a React TypeScript project that fetches a list of users and displays the
 ## License
 
 This project is open source and free to use.
-
