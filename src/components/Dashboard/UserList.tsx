@@ -1,31 +1,17 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
 import styles from "./DashboardStyles.module.css";
+import { useState } from "react";
 import UserCard from "./UserCard";
 import UserModal from "./UserModal";
 import type { User } from "../../types/types";
 
-export default function UserList() {
-  const [users, setUsers] = useState<User[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-  const [selectedUser, setSelectedUser] = useState<User | null>(null);
+type Props = {
+  users: User[];
+  loading: boolean;
+  error: string;
+};
 
-  useEffect(() => {
-    async function fetchUsers() {
-      try {
-        const response = await axios.get<User[]>(
-          "https://jsonplaceholder.typicode.com/users"
-        );
-        setUsers(response.data);
-      } catch {
-        setError("Failed to fetch users.");
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchUsers();
-  }, []);
+export default function UserList({ users, loading, error }: Props) {
+  const [selectedUser, setSelectedUser] = useState<User | null>(null);
 
   return (
     <div className={styles.mainContent}>
